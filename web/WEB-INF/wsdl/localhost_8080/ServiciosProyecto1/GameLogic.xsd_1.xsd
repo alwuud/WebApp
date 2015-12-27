@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://negocio.input.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://negocio.input.org/">
+
+<xs:element name="addAvatar" type="tns:addAvatar"/>
+
+<xs:element name="addAvatarResponse" type="tns:addAvatarResponse"/>
+
+<xs:element name="addCurso" type="tns:addCurso"/>
+
+<xs:element name="addCursoResponse" type="tns:addCursoResponse"/>
+
+<xs:element name="addDificultad" type="tns:addDificultad"/>
+
+<xs:element name="addDificultadResponse" type="tns:addDificultadResponse"/>
+
+<xs:element name="addItem" type="tns:addItem"/>
+
+<xs:element name="addItemResponse" type="tns:addItemResponse"/>
+
+<xs:element name="addItemUsuario" type="tns:addItemUsuario"/>
+
+<xs:element name="addItemUsuarioResponse" type="tns:addItemUsuarioResponse"/>
+
+<xs:element name="addPregunta" type="tns:addPregunta"/>
+
+<xs:element name="addPreguntaResponse" type="tns:addPreguntaResponse"/>
+
+<xs:element name="addUser" type="tns:addUser"/>
+
+<xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+<xs:element name="equiparItem" type="tns:equiparItem"/>
+
+<xs:element name="equiparItemResponse" type="tns:equiparItemResponse"/>
+
+<xs:element name="nuevaCarrera" type="tns:nuevaCarrera"/>
+
+<xs:element name="nuevaCarreraResponse" type="tns:nuevaCarreraResponse"/>
+
+<xs:complexType name="addCurso">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="carrera" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addCursoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemUsuario">
+<xs:sequence>
+<xs:element name="item" type="xs:int"/>
+<xs:element name="usuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAvatar">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="usuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAvatarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPregunta">
+<xs:sequence>
+<xs:element name="pregunta" type="xs:string" minOccurs="0"/>
+<xs:element name="dias" type="xs:int"/>
+<xs:element name="horas" type="xs:int"/>
+<xs:element name="minutos" type="xs:int"/>
+<xs:element name="curso" type="xs:int"/>
+<xs:element name="dificultad" type="xs:int"/>
+<xs:element name="respuestas" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addPreguntaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUser">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="rol" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nuevaCarrera">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nuevaCarreraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItem">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="rareza" type="xs:int"/>
+<xs:element name="efectividad" type="xs:int"/>
+<xs:element name="gana" type="xs:int"/>
+<xs:element name="pierde" type="xs:int"/>
+<xs:element name="unUso" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="equiparItem">
+<xs:sequence>
+<xs:element name="avatar" type="xs:int"/>
+<xs:element name="usuario" type="xs:int"/>
+<xs:element name="item" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="equiparItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDificultad">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="experiencia" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addDificultadResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
