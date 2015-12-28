@@ -46,6 +46,12 @@
 <message name="addPreguntaResponse">
 <part name="parameters" element="tns:addPreguntaResponse"/>
 </message>
+<message name="getCarrera">
+<part name="parameters" element="tns:getCarrera"/>
+</message>
+<message name="getCarreraResponse">
+<part name="parameters" element="tns:getCarreraResponse"/>
+</message>
 <message name="equiparItem">
 <part name="parameters" element="tns:equiparItem"/>
 </message>
@@ -86,6 +92,10 @@
 <operation name="addPregunta">
 <input wsam:Action="http://negocio.input.org/GameLogic/addPreguntaRequest" message="tns:addPregunta"/>
 <output wsam:Action="http://negocio.input.org/GameLogic/addPreguntaResponse" message="tns:addPreguntaResponse"/>
+</operation>
+<operation name="getCarrera">
+<input wsam:Action="http://negocio.input.org/GameLogic/getCarreraRequest" message="tns:getCarrera"/>
+<output wsam:Action="http://negocio.input.org/GameLogic/getCarreraResponse" message="tns:getCarreraResponse"/>
 </operation>
 <operation name="equiparItem">
 <input wsam:Action="http://negocio.input.org/GameLogic/equiparItemRequest" message="tns:equiparItem"/>
@@ -153,6 +163,15 @@
 </output>
 </operation>
 <operation name="addPregunta">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getCarrera">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

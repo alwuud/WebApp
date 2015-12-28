@@ -32,6 +32,10 @@
 
 <xs:element name="equiparItemResponse" type="tns:equiparItemResponse"/>
 
+<xs:element name="getCarrera" type="tns:getCarrera"/>
+
+<xs:element name="getCarreraResponse" type="tns:getCarreraResponse"/>
+
 <xs:element name="nuevaCarrera" type="tns:nuevaCarrera"/>
 
 <xs:element name="nuevaCarreraResponse" type="tns:nuevaCarreraResponse"/>
@@ -75,6 +79,18 @@
 <xs:complexType name="addAvatarResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCarrera">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCarreraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
