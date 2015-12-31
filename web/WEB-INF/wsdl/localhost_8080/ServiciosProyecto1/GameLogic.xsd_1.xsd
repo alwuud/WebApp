@@ -56,19 +56,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addItemUsuario">
-<xs:sequence>
-<xs:element name="item" type="xs:int"/>
-<xs:element name="usuario" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="addItemUsuarioResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="addAvatar">
 <xs:sequence>
 <xs:element name="nombre" type="xs:string" minOccurs="0"/>
@@ -77,6 +64,19 @@
 </xs:complexType>
 
 <xs:complexType name="addAvatarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemUsuario">
+<xs:sequence>
+<xs:element name="item" type="xs:int"/>
+<xs:element name="usuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addItemUsuarioResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
@@ -97,9 +97,7 @@
 <xs:complexType name="addPregunta">
 <xs:sequence>
 <xs:element name="pregunta" type="xs:string" minOccurs="0"/>
-<xs:element name="dias" type="xs:int"/>
-<xs:element name="horas" type="xs:int"/>
-<xs:element name="minutos" type="xs:int"/>
+<xs:element name="tiempo" type="xs:string" minOccurs="0"/>
 <xs:element name="curso" type="xs:int"/>
 <xs:element name="dificultad" type="xs:int"/>
 <xs:element name="respuestas" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
@@ -141,19 +139,14 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addItem">
+<xs:complexType name="addDificultad">
 <xs:sequence>
 <xs:element name="nombre" type="xs:string" minOccurs="0"/>
-<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
-<xs:element name="rareza" type="xs:int"/>
-<xs:element name="efectividad" type="xs:int"/>
-<xs:element name="gana" type="xs:int"/>
-<xs:element name="pierde" type="xs:int"/>
-<xs:element name="unUso" type="xs:boolean"/>
+<xs:element name="experiencia" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addItemResponse">
+<xs:complexType name="addDificultadResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>
@@ -173,14 +166,19 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addDificultad">
+<xs:complexType name="addItem">
 <xs:sequence>
 <xs:element name="nombre" type="xs:string" minOccurs="0"/>
-<xs:element name="experiencia" type="xs:int"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="rareza" type="xs:int"/>
+<xs:element name="efectividad" type="xs:int"/>
+<xs:element name="gana" type="xs:int"/>
+<xs:element name="pierde" type="xs:int"/>
+<xs:element name="unUso" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addDificultadResponse">
+<xs:complexType name="addItemResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean" minOccurs="0"/>
 </xs:sequence>

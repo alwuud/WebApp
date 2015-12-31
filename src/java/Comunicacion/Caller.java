@@ -49,11 +49,6 @@ public class Caller {
         return port.addItemUsuario(item, usuario);
     }
 
-    public static Boolean addPregunta(java.lang.String pregunta, int dias, int horas, int minutos, int curso, int dificultad, java.util.List<java.lang.String> respuestas) {
-        org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
-        org.input.negocio.GameLogic port = service.getGameLogicPort();
-        return port.addPregunta(pregunta, dias, horas, minutos, curso, dificultad, respuestas);
-    }
 
     public static Boolean addUser(java.lang.String nombre, java.lang.String user, java.lang.String password, java.lang.String email, int rol) {
         org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
@@ -72,6 +67,14 @@ public class Caller {
         org.input.negocio.GameLogic port = service.getGameLogicPort();
         return port.getCarrera(codigo);
     }
+
+    public static Boolean addPregunta(java.lang.String pregunta, java.lang.String tiempo, int curso, int dificultad, java.util.List<java.lang.String> respuestas) {
+        org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
+        org.input.negocio.GameLogic port = service.getGameLogicPort();
+        return port.addPregunta(pregunta, tiempo, curso, dificultad, respuestas);
+    }
+
+  
 
     
     
