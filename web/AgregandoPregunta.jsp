@@ -36,10 +36,16 @@
                     respuestas.add("0~" + request.getParameter("r"+(i+1)));
             }
             
-            Caller.addPregunta(p, tiempo, curso, dificultad, respuestas);
             
             
-        
+            boolean ingreso= Caller.addPregunta(p, tiempo, curso, dificultad, respuestas);
+            
+            if(ingreso){%>
+                Se agrego la pregunta correctamente
+            <%}else{%>
+                Error al agregar la pregunta
+            
+            <%}
         
         %>
     </body>

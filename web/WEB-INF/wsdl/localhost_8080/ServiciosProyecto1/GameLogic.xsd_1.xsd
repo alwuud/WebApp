@@ -28,6 +28,18 @@
 
 <xs:element name="addUserResponse" type="tns:addUserResponse"/>
 
+<xs:element name="changePassword" type="tns:changePassword"/>
+
+<xs:element name="changePasswordResponse" type="tns:changePasswordResponse"/>
+
+<xs:element name="descartarItem" type="tns:descartarItem"/>
+
+<xs:element name="descartarItemResponse" type="tns:descartarItemResponse"/>
+
+<xs:element name="desequiparItem" type="tns:desequiparItem"/>
+
+<xs:element name="desequiparItemResponse" type="tns:desequiparItemResponse"/>
+
 <xs:element name="equiparItem" type="tns:equiparItem"/>
 
 <xs:element name="equiparItemResponse" type="tns:equiparItemResponse"/>
@@ -52,7 +64,7 @@
 
 <xs:complexType name="addCursoResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -65,7 +77,7 @@
 
 <xs:complexType name="addAvatarResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -78,7 +90,19 @@
 
 <xs:complexType name="addItemUsuarioResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="descartarItem">
+<xs:sequence>
+<xs:element name="idItemUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="descartarItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -106,7 +130,19 @@
 
 <xs:complexType name="addPreguntaResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="desequiparItem">
+<xs:sequence>
+<xs:element name="idItemUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="desequiparItemResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -122,7 +158,7 @@
 
 <xs:complexType name="addUserResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -135,7 +171,7 @@
 
 <xs:complexType name="nuevaCarreraResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -148,21 +184,20 @@
 
 <xs:complexType name="addDificultadResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="equiparItem">
 <xs:sequence>
 <xs:element name="avatar" type="xs:int"/>
-<xs:element name="usuario" type="xs:int"/>
 <xs:element name="item" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="equiparItemResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -180,7 +215,20 @@
 
 <xs:complexType name="addItemResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePassword">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:int"/>
+<xs:element name="parameter1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="changePasswordResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

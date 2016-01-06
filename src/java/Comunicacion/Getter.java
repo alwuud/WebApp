@@ -12,6 +12,7 @@ import org.input.negocio.Usuario;
  * @author Daniel
  */
 public class Getter {
+    
 
     public static java.util.List<org.input.negocio.Carrera> getCarreras() {
         org.input.negocio.ResponseLogic_Service service = new org.input.negocio.ResponseLogic_Service();
@@ -43,11 +44,33 @@ public class Getter {
         return port.getExperiencia(idUsuario);
     }
 
-    public static Integer numAvatares(int idUsuario) {
+    public static int numAvatares(int idUsuario) {
         org.input.negocio.ResponseLogic_Service service = new org.input.negocio.ResponseLogic_Service();
         org.input.negocio.ResponseLogic port = service.getResponseLogicPort();
         return port.numAvatares(idUsuario);
     }
+
+    public static java.util.List<org.input.negocio.Item> getItemUsuario(int idUsuer) {
+        org.input.negocio.ResponseLogic_Service service = new org.input.negocio.ResponseLogic_Service();
+        org.input.negocio.ResponseLogic port = service.getResponseLogicPort();
+        return port.getItemUsuario(idUsuer);
+    }
+
+    public static java.util.List<org.input.negocio.Avatar> getAvataresUsuario(int idUser) {
+        org.input.negocio.ResponseLogic_Service service = new org.input.negocio.ResponseLogic_Service();
+        org.input.negocio.ResponseLogic port = service.getResponseLogicPort();
+        return port.getAvataresUsuario(idUser);
+    }
+
+    public static java.util.List<org.input.negocio.Item> getItemUsuarioLibre(int idUsuer) {
+        org.input.negocio.ResponseLogic_Service service = new org.input.negocio.ResponseLogic_Service();
+        org.input.negocio.ResponseLogic port = service.getResponseLogicPort();
+        return port.getItemUsuarioLibre(idUsuer);
+    }
+    
+    
+    
+    
 
   
     

@@ -4,17 +4,35 @@
 <xsd:import namespace="http://negocio.input.org/" schemaLocation="http://localhost:8080/ServiciosProyecto1/GameLogic?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addUser">
-<part name="parameters" element="tns:addUser"/>
+<message name="desequiparItem">
+<part name="parameters" element="tns:desequiparItem"/>
 </message>
-<message name="addUserResponse">
-<part name="parameters" element="tns:addUserResponse"/>
+<message name="desequiparItemResponse">
+<part name="parameters" element="tns:desequiparItemResponse"/>
+</message>
+<message name="descartarItem">
+<part name="parameters" element="tns:descartarItem"/>
+</message>
+<message name="descartarItemResponse">
+<part name="parameters" element="tns:descartarItemResponse"/>
 </message>
 <message name="addItemUsuario">
 <part name="parameters" element="tns:addItemUsuario"/>
 </message>
 <message name="addItemUsuarioResponse">
 <part name="parameters" element="tns:addItemUsuarioResponse"/>
+</message>
+<message name="changePassword">
+<part name="parameters" element="tns:changePassword"/>
+</message>
+<message name="changePasswordResponse">
+<part name="parameters" element="tns:changePasswordResponse"/>
+</message>
+<message name="addUser">
+<part name="parameters" element="tns:addUser"/>
+</message>
+<message name="addUserResponse">
+<part name="parameters" element="tns:addUserResponse"/>
 </message>
 <message name="nuevaCarrera">
 <part name="parameters" element="tns:nuevaCarrera"/>
@@ -65,13 +83,25 @@
 <part name="parameters" element="tns:getCarreraResponse"/>
 </message>
 <portType name="GameLogic">
-<operation name="addUser">
-<input wsam:Action="http://negocio.input.org/GameLogic/addUserRequest" message="tns:addUser"/>
-<output wsam:Action="http://negocio.input.org/GameLogic/addUserResponse" message="tns:addUserResponse"/>
+<operation name="desequiparItem">
+<input wsam:Action="http://negocio.input.org/GameLogic/desequiparItemRequest" message="tns:desequiparItem"/>
+<output wsam:Action="http://negocio.input.org/GameLogic/desequiparItemResponse" message="tns:desequiparItemResponse"/>
+</operation>
+<operation name="descartarItem">
+<input wsam:Action="http://negocio.input.org/GameLogic/descartarItemRequest" message="tns:descartarItem"/>
+<output wsam:Action="http://negocio.input.org/GameLogic/descartarItemResponse" message="tns:descartarItemResponse"/>
 </operation>
 <operation name="addItemUsuario">
 <input wsam:Action="http://negocio.input.org/GameLogic/addItemUsuarioRequest" message="tns:addItemUsuario"/>
 <output wsam:Action="http://negocio.input.org/GameLogic/addItemUsuarioResponse" message="tns:addItemUsuarioResponse"/>
+</operation>
+<operation name="changePassword">
+<input wsam:Action="http://negocio.input.org/GameLogic/changePasswordRequest" message="tns:changePassword"/>
+<output wsam:Action="http://negocio.input.org/GameLogic/changePasswordResponse" message="tns:changePasswordResponse"/>
+</operation>
+<operation name="addUser">
+<input wsam:Action="http://negocio.input.org/GameLogic/addUserRequest" message="tns:addUser"/>
+<output wsam:Action="http://negocio.input.org/GameLogic/addUserResponse" message="tns:addUserResponse"/>
 </operation>
 <operation name="nuevaCarrera">
 <input wsam:Action="http://negocio.input.org/GameLogic/nuevaCarreraRequest" message="tns:nuevaCarrera"/>
@@ -108,7 +138,16 @@
 </portType>
 <binding name="GameLogicPortBinding" type="tns:GameLogic">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addUser">
+<operation name="desequiparItem">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="descartarItem">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -118,6 +157,24 @@
 </output>
 </operation>
 <operation name="addItemUsuario">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="changePassword">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="addUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

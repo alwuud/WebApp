@@ -4,17 +4,11 @@
 <xsd:import namespace="http://negocio.input.org/" schemaLocation="http://localhost:8080/ServiciosProyecto1/ResponseLogic?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="numAvatares">
-<part name="parameters" element="tns:numAvatares"/>
+<message name="getDificultades">
+<part name="parameters" element="tns:getDificultades"/>
 </message>
-<message name="numAvataresResponse">
-<part name="parameters" element="tns:numAvataresResponse"/>
-</message>
-<message name="checkPassword">
-<part name="parameters" element="tns:checkPassword"/>
-</message>
-<message name="checkPasswordResponse">
-<part name="parameters" element="tns:checkPasswordResponse"/>
+<message name="getDificultadesResponse">
+<part name="parameters" element="tns:getDificultadesResponse"/>
 </message>
 <message name="getExperiencia">
 <part name="parameters" element="tns:getExperiencia"/>
@@ -22,17 +16,23 @@
 <message name="getExperienciaResponse">
 <part name="parameters" element="tns:getExperienciaResponse"/>
 </message>
-<message name="getDificultades">
-<part name="parameters" element="tns:getDificultades"/>
+<message name="getItemUsuario">
+<part name="parameters" element="tns:getItemUsuario"/>
 </message>
-<message name="getDificultadesResponse">
-<part name="parameters" element="tns:getDificultadesResponse"/>
+<message name="getItemUsuarioResponse">
+<part name="parameters" element="tns:getItemUsuarioResponse"/>
 </message>
-<message name="adios">
-<part name="parameters" element="tns:adios"/>
+<message name="getAvataresUsuario">
+<part name="parameters" element="tns:getAvataresUsuario"/>
 </message>
-<message name="adiosResponse">
-<part name="parameters" element="tns:adiosResponse"/>
+<message name="getAvataresUsuarioResponse">
+<part name="parameters" element="tns:getAvataresUsuarioResponse"/>
+</message>
+<message name="getItemUsuarioLibre">
+<part name="parameters" element="tns:getItemUsuarioLibre"/>
+</message>
+<message name="getItemUsuarioLibreResponse">
+<part name="parameters" element="tns:getItemUsuarioLibreResponse"/>
 </message>
 <message name="getCarreras">
 <part name="parameters" element="tns:getCarreras"/>
@@ -52,26 +52,44 @@
 <message name="getCursoResponse">
 <part name="parameters" element="tns:getCursoResponse"/>
 </message>
+<message name="adios">
+<part name="parameters" element="tns:adios"/>
+</message>
+<message name="adiosResponse">
+<part name="parameters" element="tns:adiosResponse"/>
+</message>
+<message name="checkPassword">
+<part name="parameters" element="tns:checkPassword"/>
+</message>
+<message name="checkPasswordResponse">
+<part name="parameters" element="tns:checkPasswordResponse"/>
+</message>
+<message name="numAvatares">
+<part name="parameters" element="tns:numAvatares"/>
+</message>
+<message name="numAvataresResponse">
+<part name="parameters" element="tns:numAvataresResponse"/>
+</message>
 <portType name="ResponseLogic">
-<operation name="numAvatares">
-<input wsam:Action="http://negocio.input.org/ResponseLogic/numAvataresRequest" message="tns:numAvatares"/>
-<output wsam:Action="http://negocio.input.org/ResponseLogic/numAvataresResponse" message="tns:numAvataresResponse"/>
-</operation>
-<operation name="checkPassword">
-<input wsam:Action="http://negocio.input.org/ResponseLogic/checkPasswordRequest" message="tns:checkPassword"/>
-<output wsam:Action="http://negocio.input.org/ResponseLogic/checkPasswordResponse" message="tns:checkPasswordResponse"/>
+<operation name="getDificultades">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/getDificultadesRequest" message="tns:getDificultades"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/getDificultadesResponse" message="tns:getDificultadesResponse"/>
 </operation>
 <operation name="getExperiencia">
 <input wsam:Action="http://negocio.input.org/ResponseLogic/getExperienciaRequest" message="tns:getExperiencia"/>
 <output wsam:Action="http://negocio.input.org/ResponseLogic/getExperienciaResponse" message="tns:getExperienciaResponse"/>
 </operation>
-<operation name="getDificultades">
-<input wsam:Action="http://negocio.input.org/ResponseLogic/getDificultadesRequest" message="tns:getDificultades"/>
-<output wsam:Action="http://negocio.input.org/ResponseLogic/getDificultadesResponse" message="tns:getDificultadesResponse"/>
+<operation name="getItemUsuario">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/getItemUsuarioRequest" message="tns:getItemUsuario"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/getItemUsuarioResponse" message="tns:getItemUsuarioResponse"/>
 </operation>
-<operation name="adios">
-<input wsam:Action="http://negocio.input.org/ResponseLogic/adiosRequest" message="tns:adios"/>
-<output wsam:Action="http://negocio.input.org/ResponseLogic/adiosResponse" message="tns:adiosResponse"/>
+<operation name="getAvataresUsuario">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/getAvataresUsuarioRequest" message="tns:getAvataresUsuario"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/getAvataresUsuarioResponse" message="tns:getAvataresUsuarioResponse"/>
+</operation>
+<operation name="getItemUsuarioLibre">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/getItemUsuarioLibreRequest" message="tns:getItemUsuarioLibre"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/getItemUsuarioLibreResponse" message="tns:getItemUsuarioLibreResponse"/>
 </operation>
 <operation name="getCarreras">
 <input wsam:Action="http://negocio.input.org/ResponseLogic/getCarrerasRequest" message="tns:getCarreras"/>
@@ -85,19 +103,22 @@
 <input wsam:Action="http://negocio.input.org/ResponseLogic/getCursoRequest" message="tns:getCurso"/>
 <output wsam:Action="http://negocio.input.org/ResponseLogic/getCursoResponse" message="tns:getCursoResponse"/>
 </operation>
+<operation name="adios">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/adiosRequest" message="tns:adios"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/adiosResponse" message="tns:adiosResponse"/>
+</operation>
+<operation name="checkPassword">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/checkPasswordRequest" message="tns:checkPassword"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/checkPasswordResponse" message="tns:checkPasswordResponse"/>
+</operation>
+<operation name="numAvatares">
+<input wsam:Action="http://negocio.input.org/ResponseLogic/numAvataresRequest" message="tns:numAvatares"/>
+<output wsam:Action="http://negocio.input.org/ResponseLogic/numAvataresResponse" message="tns:numAvataresResponse"/>
+</operation>
 </portType>
 <binding name="ResponseLogicPortBinding" type="tns:ResponseLogic">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="numAvatares">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="checkPassword">
+<operation name="getDificultades">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -115,7 +136,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getDificultades">
+<operation name="getItemUsuario">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -124,7 +145,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="adios">
+<operation name="getAvataresUsuario">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getItemUsuarioLibre">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -152,6 +182,33 @@
 </output>
 </operation>
 <operation name="getCurso">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="adios">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="checkPassword">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="numAvatares">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

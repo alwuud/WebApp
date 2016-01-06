@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://localhost:8080/ServiciosProyecto1/GameLogic?wsdl" uri="src/conf/xml-resources/web-service-references/GameLogic/wsdl/localhost_8080/ServiciosProyecto1/GameLogic.wsdl"/>
-    <system systemId="http://localhost:8080/ServiciosProyecto1/GameLogic?xsd=1" uri="src/conf/xml-resources/web-service-references/GameLogic/wsdl/localhost_8080/ServiciosProyecto1/GameLogic.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ServiciosProyecto1/ResponseLogic?wsdl" uri="src/conf/xml-resources/web-service-references/ResponseLogic/wsdl/localhost_8080/ServiciosProyecto1/ResponseLogic.wsdl"/>
     <system systemId="http://localhost:8080/ServiciosProyecto1/ResponseLogic?xsd=1" uri="src/conf/xml-resources/web-service-references/ResponseLogic/wsdl/localhost_8080/ServiciosProyecto1/ResponseLogic.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServiciosProyecto1/GameLogic?wsdl" uri="src/conf/xml-resources/web-service-references/GameLogic/wsdl/localhost_8080/ServiciosProyecto1/GameLogic.wsdl"/>
+    <system systemId="http://localhost:8080/ServiciosProyecto1/GameLogic?xsd=1" uri="src/conf/xml-resources/web-service-references/GameLogic/wsdl/localhost_8080/ServiciosProyecto1/GameLogic.xsd_1.xsd"/>
 </catalog>

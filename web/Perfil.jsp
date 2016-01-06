@@ -13,18 +13,34 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <%
+      Usuario u=(Usuario) session.getAttribute("theUser");
+      
+      
+    %>
     <body>
+       
+         
+         
+        <h1>Perfil de <%=  u.getUser()%></h1>
         
-        <%
-          
-        session = request.getSession(true);  
-        session.setAttribute("nombre", "Pedro");
-
+        <h2>Correo Electronico:  <%= u.getEmail()%></h2>
+        <h2>Experiencia Acumulada: <%= u.getExp()%></h2>
+        <form action="ChangePass.jsp" method="PHOST">
+            <h2>Contrasena: <input type="text" name="pass" value="<%= u.getPassword()%>"></h2>
+            <input type="submit" value="Cambiar Password">
+                
             
-        %>
+        </form>
         
         
-        <%= session.getAttribute("nombre") %>
+        
+        
+      
+        
+        
+        
+        
                 
      
             

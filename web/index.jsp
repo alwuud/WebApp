@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form action="checklogin.jsp" method="GET">
+        <form action="checklogin.jsp" method="PHOST">
             User: <input type="text" name="u"> <br/> <br/>
             Password: <input type="text" name="p"><br/><br/>
              

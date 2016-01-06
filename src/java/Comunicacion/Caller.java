@@ -19,7 +19,7 @@ public class Caller {
         return port.nuevaCarrera(codigo, nombre);
     }
 
-    private static Boolean addAvatar(java.lang.String nombre, int usuario) {
+    public static Boolean addAvatar(java.lang.String nombre, int usuario) {
         org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
         org.input.negocio.GameLogic port = service.getGameLogicPort();
         return port.addAvatar(nombre, usuario);
@@ -56,10 +56,10 @@ public class Caller {
         return port.addUser(nombre, user, password, email, rol);
     }
 
-    public static Boolean equiparItem(int avatar, int usuario, int item) {
+    public static boolean equiparItem(int avatar,  int item) {
         org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
         org.input.negocio.GameLogic port = service.getGameLogicPort();
-        return port.equiparItem(avatar, usuario, item);
+        return port.equiparItem(avatar,  item);
     }
 
     public static String getCarrera(int codigo) {
@@ -72,6 +72,24 @@ public class Caller {
         org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
         org.input.negocio.GameLogic port = service.getGameLogicPort();
         return port.addPregunta(pregunta, tiempo, curso, dificultad, respuestas);
+    }
+
+    public static boolean changePassword(int idUsuario, java.lang.String parameter1) {
+        org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
+        org.input.negocio.GameLogic port = service.getGameLogicPort();
+        return port.changePassword(idUsuario, parameter1);
+    }
+
+    public static boolean descartarItem(int idItemUsuario) {
+        org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
+        org.input.negocio.GameLogic port = service.getGameLogicPort();
+        return port.descartarItem(idItemUsuario);
+    }
+
+    public static boolean desequiparItem(int idItemUsuario) {
+        org.input.negocio.GameLogic_Service service = new org.input.negocio.GameLogic_Service();
+        org.input.negocio.GameLogic port = service.getGameLogicPort();
+        return port.desequiparItem(idItemUsuario);
     }
 
   
